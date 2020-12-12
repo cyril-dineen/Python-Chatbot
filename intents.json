@@ -1,11 +1,11 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "responses": ["Hello, I am good! thanks for asking", "Good to see you again", "Hi there, how can I help?"],
          "context": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, goodbye", "Till next time"],
          "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
          "context": [""]
         },
@@ -16,58 +16,53 @@
         },
         {"tag": "noanswer",
          "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "responses": ["Sorry, I can't understand you", "Please give me more information", "I'm not sure I understand" , "Can you repeat, please?"],
          "context": [""]
         },
         {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies", "Offering support for Adverse drug reaction, Blood pressure, Hospitals and Pharmacies"],
+         "patterns": ["How you could help me?", "What you can do?", "What help do you provide?", "How can you help me?", "What support is offered"],
+         "responses": ["I can answer your possible questions.", "I am here to help you to provide the best service. How may help you?", "I will do my best to answer your queries"],
          "context": [""]
         },
-        {"tag": "adverse_drug",
-         "patterns": ["How to check Adverse drug reaction?", "Open adverse drugs module", "Give me a list of drugs causing adverse behavior", "List all drugs suitable for patient with adverse reaction", "Which drugs dont have adverse reaction?" ],
-         "responses": ["Navigating to Adverse drug reaction module"],
+        {"tag": "my_application",
+         "patterns": ["How to check my application?", "There is no answer to my application", "My application is on hold.", "I am waiting for my application to be updated"],
+         "responses": ["Someone from our professional team will contact you in regards to you applicaction."],
          "context": [""]
         },
-        {"tag": "blood_pressure",
-         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", "Blood pressure data management" ],
-         "responses": ["Navigating to Blood Pressure module"],
+        {"tag": "my_account",
+         "patterns": ["I have a problem with my my account", "My account is not working", "I can't login into my account", "The details on my account are incorrect", "My account is closed" ],
+         "responses": ["Please send an email to our IT department so we can resolve your issue as soon as possible."],
          "context": [""]
         },
-        {"tag": "blood_pressure_search",
-         "patterns": ["I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
-         "responses": ["Please provide Patient ID", "Patient ID?"],
-         "context": ["search_blood_pressure_by_patient_id"]
-        },
-        {"tag": "search_blood_pressure_by_patient_id",
-         "patterns": [],
-         "responses": ["Loading Blood pressure result for Patient"],
+        {"tag": "loan",
+         "patterns": ["I want to apply for a loan", "I need information how to apply a loan", "How the loan app works?"],
+         "responses": ["To apply for a loan you need to have an account with us", "Do you have an account with us?"],
          "context": [""]
         },
-        {"tag": "pharmacy_search",
-         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
-         "responses": ["Please provide pharmacy name"],
-         "context": ["search_pharmacy_by_name"]
-        },
-        {"tag": "search_pharmacy_by_name",
-         "patterns": [],
-         "responses": ["Loading pharmacy details"],
+        {"tag": "how_it_works",
+         "patterns": ["How does this app work?" , "What makes this app different to any other financial apps?" , "What is the advantages of applying with IR9? "],
+         "responses": ["In IR9 we like to provide a personalised approach for each customer" , "We like to help people to achieve their financial goals"],
          "context": [""]
         },
-        {"tag": "hospital_search",
-         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
-         "responses": ["Please provide hospital name or location"],
-         "context": ["search_hospital_by_params"]
+        {"tag": "login",
+         "patterns": ["I cannot login", "I forgot my password", "My account has been deleted", "The app doesnt recognise my username", "Im getting a password error" ],
+         "responses": ["If you are having a login problem, provide us your email and someone will contact you soon." , "Please hold while we get someone to help you." , "An email will be sent to your inbox with new login details."],
+         "context": ["login_problems"]
         },
-        {"tag": "search_hospital_by_params",
-         "patterns": [],
-         "responses": ["Please provide hospital type"],
-         "context": ["search_hospital_by_type"]
-        },
-        {"tag": "search_hospital_by_type",
-         "patterns": [],
-         "responses": ["Loading hospital details"],
+        {"tag": "talk_to_a_person",
+         "patterns": ["Can I speak to a person?" , "I'd like to speak to someone" , "Is there any person that I can talk to"],
+         "responses": ["To be able to provide you the best service possible, please tell me about your query. If I am unable to resolve your issue I will link you to a member of our team"],
          "context": [""]
+        },
+        {"tag": "house_details",
+         "patterns": ["The details of the house are incorrect", "The price of the house is wrong", "The living space is wrong", "I want to change my house"],
+         "responses": ["Please review your application and change the details in question" ],
+         "context": ["house_details"]
+        },
+        {"tag": "phone_number",
+         "patterns": [ "Is there a telephone number to call?", "Can I call a real person?" , "I'd like to speak to somebody over the phone"],
+         "responses": ["Someone will be in contact with you soon. Thank you"],
+         "context": ["telephone"]
         }
    ]
 }
