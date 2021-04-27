@@ -1,4 +1,4 @@
-# GProject-Chatbot
-This is the chatbot resources required to create and run a chatbot for the financial app
-A GUI will be created where the user can input questions 
-The user input will be analysed and a response will be printed back to the user
+# Python-Chatbot
+This is a chatbot programmed in Python for use in financial app
+A GUI prompts users for questions and provides answers 
+It is linked to a JSON file with key words which return a set of predetermined responses depending on the question/query
